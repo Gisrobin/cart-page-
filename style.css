@@ -13,7 +13,7 @@ body{
 nav{
     justify-content:space-between;
     display: flex;
-    padding-left: 200px;
+    padding-left: 100px;
     font-weight: bolder;
     font-size: x-large;
     margin: 20px;

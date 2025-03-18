@@ -11,8 +11,8 @@
         <div class="OTF">
             <h1>WELCOME TO THE OTF</h1>
         </div>
-
-        <form action="">
+        <div class="all"> <form action="">
+            <div id="page"></div>
             <label for="">firstname</label><br>
             <input type="text" class="firstname " id="firstname" placeholder="firstname"><br><br>
             
@@ -26,31 +26,33 @@
             <input type="password" class="password " id="password" placeholder="password"><br><br>
 
             <label for="DOB">Date of birth</label><br>
-            <input type="date" id="DOB" placeholder="" class="DOB"><br>
-
-           <br> <button id="submit" onclick="sayhi()">submit</button>
+            <input type="date" id="DOB" placeholder="" class="DOB">
+            <br/><br/>
+            <input type="submit" value="Submit Form">
+           </div>
+       
+        </div>
             
         </form>
         <script>
-            document.getElementById("submit").addEventListener("submit", function(event) {
+            let form = document.querySelector("form");
+            form.addEventListener("submit", function (event) {
                 event.preventDefault(); 
-    
-                let fName = document.getElementById("firstname");
-                let lName = document.getElementById("lastname");
-                let email = document.getElementById("email");
-                let password = document.getElementById("password");
-                let birthDate = document.getElementById("DOB");
+                let fName = document.querySelector("#firstname");
+                let lName = document.querySelector("#lastname");
+                let email = document.querySelector("#email");
+                let password = document.querySelector("#password");
+                let birthDate = document.querySelector("#DOB");
     
                 let h1 = document.querySelector("h1");
-                h1.innerText = `Welcome ${fName.value} ${lName.value}!`;
+                h1.innerHTML = `Welcome ${fName.value} ${lName.value}!`;
     
                 let content = document.querySelector("form");
                 content.innerHTML = `
                     <p>Your name is: ${fName.value} ${lName.value}</p>
                     <p>Your email is: ${email.value}</p>
                     <p>Your date of birth is: ${birthDate.value}</p>
-                    <p style="color: red;">YOU HAVE BEEN REGISTERED!</p>
-                `;
+                    <p style="color: red;">YOU HAVE BEEN REGISTERED!</p>`;
             });
         </script>
     
