@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    margin: 200px;
+    color: rgb(46, 112, 114);
+    background-color: rgb(23, 34, 30);
+    padding: 20px;
+}
+form{
+    border: 1px solid black;
+    border-radius: 15px;
+    background-image:url(lil\ durk.jpeg) ;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    padding: 100px;
+
+}
+.OTF{
+    display: flex;
+    justify-content: center;
+}

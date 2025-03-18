@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="form"> 
+        <div class="OTF">
+            <h1>WELCOME TO THE OTF</h1>
+        </div>
+
+        <form action="">
+            <label for="">firstname</label><br>
+            <input type="text" class="firstname " id="firstname" placeholder="firstname"><br><br>
+            
+            <label for="">lastname</label><br>
+            <input type="text" class="lastname" id="lastname" placeholder="lastname"><br><br>
+            
+            <label for="">email</label><br>
+            <input type="text" class="email " id="email" placeholder="email" ><br><br>
+            
+            <label for="">password</label><br>
+            <input type="password" class="password " id="password" placeholder="password"><br><br>
+
+            <label for="DOB">Date of birth</label><br>
+            <input type="date" id="DOB" placeholder="" class="DOB"><br>
+
+           <br> <button id="submit" onclick="sayhi()">submit</button>
+            
+        </form>
+        <script>
+            document.getElementById("submit").addEventListener("submit", function(event) {
+                event.preventDefault(); 
+    
+                let fName = document.getElementById("firstname");
+                let lName = document.getElementById("lastname");
+                let email = document.getElementById("email");
+                let password = document.getElementById("password");
+                let birthDate = document.getElementById("DOB");
+    
+                let h1 = document.querySelector("h1");
+                h1.innerText = `Welcome ${fName.value} ${lName.value}!`;
+    
+                let content = document.querySelector("form");
+                content.innerHTML = `
+                    <p>Your name is: ${fName.value} ${lName.value}</p>
+                    <p>Your email is: ${email.value}</p>
+                    <p>Your date of birth is: ${birthDate.value}</p>
+                    <p style="color: red;">YOU HAVE BEEN REGISTERED!</p>
+                `;
+            });
+        </script>
+    
+        
+    
+</body>
+</html>
